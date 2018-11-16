@@ -1,0 +1,18 @@
+syntax="proto3";
+
+package MyGrpc;
+
+message Request{
+	int32 id = 1;
+}
+
+
+message NameAndSurname{
+	string name = 1;
+	string surname = 2;
+}
+
+
+service MyService{
+	rpc Search (Request) returns (NameAndSurname) {};
+}
